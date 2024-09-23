@@ -1,9 +1,9 @@
 import streamlit as st
 
 x = st.number_input('Masukkan angka')
-sx = st.text_input('Satuan', 'C')
+sx = st.selectbox('Satuan asal', ['C', 'R', 'F', 'K'], key='sx')
 st.write("Anda memasukkan", x, ' ', sx)
-sy = st.text_input('Dikonversi ke', 'C')
+sy = st.selectbox('Dikonversi ke', ['C', 'R', 'F', 'K'], key='sy')
 y = 0
 
 if sx == 'C':
@@ -15,8 +15,6 @@ if sx == 'C':
         y = (x * 9 / 5) + 32
     elif sy == 'K':
         y = x + 273.15
-    else:
-        st.write('Satuan tujuan salah')
 elif sx == 'R':
     if sy == 'C':
         y = x * 5 / 4
@@ -26,8 +24,6 @@ elif sx == 'R':
         y = (x * 9 / 4) + 32
     elif sy == 'K':
         y = (x * 5 / 4) + 273.15
-    else:
-        st.write('Satuan tujuan salah')
 elif sx == 'F':
     if sy == 'C':
         y = (x - 32) * 5 / 9
@@ -37,8 +33,6 @@ elif sx == 'F':
         y = x
     elif sy == 'K':
         y = (x - 32) * 5 / 9 + 273.15
-    else:
-        st.write('Satuan tujuan salah')
 elif sx == 'K':
     if sy == 'C':
         y = x - 273.15
@@ -48,9 +42,5 @@ elif sx == 'K':
         y = (x - 273.15) * 9 / 5 + 32
     elif sy == 'K':
         y = x
-    else:
-        st.write('Satuan tujuan salah')
-else:
-    st.write('Satuan asal salah')
 
 st.write(x, ' ', sx, ' = ', y, ' ', sy)
