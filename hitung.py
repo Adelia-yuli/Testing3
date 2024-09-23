@@ -15,8 +15,8 @@ if sx == 'C':
         y = (x * 9 / 5) + 32
     elif sy == 'K':
         y = x + 273.15
-    else:
-        st.write('Satuan tujuan salah')
+    #else:
+       # st.write('Satuan tujuan salah')
 elif sx == 'R':
     if sy == 'C':
         y = x * 5 / 4
@@ -26,8 +26,8 @@ elif sx == 'R':
         y = (x * 9 / 4) + 32
     elif sy == 'K':
         y = (x * 5 / 4) + 273.15
-    else:
-        st.write('Satuan tujuan salah')
+    #else:
+        #st.write('Satuan tujuan salah')
 elif sx == 'F':
     if sy == 'C':
         y = (x - 32) * 5 / 9
@@ -37,8 +37,8 @@ elif sx == 'F':
         y = x
     elif sy == 'K':
         y = (x - 32) * 5 / 9 + 273.15
-    else:
-        st.write('Satuan tujuan salah')
+   # else:
+      #  st.write('Satuan tujuan salah')
 elif sx == 'K':
     if sy == 'C':
         y = x - 273.15
@@ -48,9 +48,9 @@ elif sx == 'K':
         y = (x - 273.15) * 9 / 5 + 32
     elif sy == 'K':
         y = x
-    else:
-        st.write('Satuan tujuan salah')
-else:
+  #  else:
+     #   st.write('Satuan tujuan salah')
+#else:
     st.write('Satuan asal salah')
 
 st.write(x, ' ', sx, ' = ', y, ' ', sy)
